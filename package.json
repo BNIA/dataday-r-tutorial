@@ -1,0 +1,23 @@
+{
+  "name": "dataday-r-tutorial",
+  "version": "0.5.0",
+  "description": "Resources, as well as scripts to generate the site for 2015's Baltimore Data Day R Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BNIA/dataday-r-tutorial.git"
+  },
+  "keywords": [
+    "R",
+    "bnia"
+  ],
+  "author": "Evan Mahone",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/BNIA/dataday-r-tutorial/issues"
+  },
+  "homepage": "https://github.com/BNIA/dataday-r-tutorial#readme"
+}
