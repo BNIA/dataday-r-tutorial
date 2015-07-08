@@ -5,9 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "ejs": "^2.3.2",
-    "express": "^4.13.1"
-  },
-  "devDependencies": {
+    "express": "^4.13.1",
     "gulp": "^3.9.0",
     "gulp-bower": "^0.0.10",
     "gulp-concat": "^2.6.0",
@@ -17,19 +15,19 @@
     "gulp-install": "^0.4.0",
     "gulp-jade": "^1.0.1",
     "gulp-jade-inheritance": "^0.5.2",
-    "gulp-jsdoc": "^0.1.4",
     "gulp-just-replace": "^1.0.2",
     "gulp-less": "^3.0.3",
-    "gulp-remove-lines": "^0.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.3",
     "gulp-replace-task": "^0.2.1",
     "run-sequence": "^1.1.1",
     "vinyl-source-stream": "^1.1.0"
   },
+  "devDependencies": {
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "gulp"
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
