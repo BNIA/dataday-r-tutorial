@@ -20,8 +20,19 @@ mixin toc_subitem(href,name)
 		| &nbsp;&nbsp;&dash;&nbsp;
 		a(href=href)= name
 mixin main_section(name)
-	h3&attributes(attributes)= name
-	div.section-contents
+	h2&attributes(attributes)= name
+	div.section-contents.main-section-contents
+		block
+
+mixin subsection(name)
+	h2&attributes(attributes)= name
+	div.section-contents.subsection-contents
+		block
+
+mixin subsubsection(name)
+	b.header&attributes(attributes)= name
+	br
+	div.section-contents.subsubsection-contents
 		block
 
 mixin rcode

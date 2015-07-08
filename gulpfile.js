@@ -15,16 +15,20 @@ var install = require('gulp-install');
 
 gulp.task('default',['build_all']);
 
-gulp.task('build_all',['doc_build','ss_build']);
+gulp.task('build_all',function(){
+    runSequence('process_r','doc_build_components','doc_build_stylesheets','doc_browserify','doc_compile_jade','process_r','ss_build_components','ss_build_stylesheets','ss_browserify','ss_compile_jade', function(){
+        console.log("Finished Building all");
+    });
+});
 
 gulp.task('doc_build',function(){
-    runSequence('process_r','doc_build_components','doc_build_stylesheets','doc_browserify','doc_compile_jade',function(){
+    return runSequence('process_r','doc_build_components','doc_build_stylesheets','doc_browserify','doc_compile_jade',function(){
         console.log("Finished Building doc");
     })
 });
 
 gulp.task('ss_build',function(){
-    runSequence('process_r','ss_build_components','ss_build_stylesheets','ss_browserify','ss_compile_jade',function(){
+    return runSequence('process_r','ss_build_components','ss_build_stylesheets','ss_browserify','ss_compile_jade',function(){
         console.log('Finished Building ss');
     })
 });
