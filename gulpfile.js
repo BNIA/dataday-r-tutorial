@@ -100,11 +100,11 @@ gulp.task('bower_install',function(){
 });
 
 gulp.task('clone_backbone', function(){
-    return git.clone('http://github.com/jashkenas/backbone.git',{cwd: './src/components/'});
+    return git.clone('http://github.com/jashkenas/backbone.git',{cwd: __dirname + '/src/components/'});
 });
 
 gulp.task('clone_rfiddle', function(){
-    return git.clone('http://github.com/Data-Camp/rfiddleHelper.git',{cwd:'./src/components/'});
+    return git.clone('http://github.com/Data-Camp/rfiddleHelper.git',{cwd:__dirname + '/src/components/'});
 });
 
 //must clone_backbone first
@@ -117,7 +117,7 @@ gulp.task('parse_backbone_css', function(){
         .pipe(replace(/<style>/,''))
         .pipe(replace(/<\/style>/,''))
         .pipe(rename('backbone.css'))
-        .pipe(gulp.dest('src/components/_processed'));
+        .pipe(gulp.dest('./src/components/_processed'));
 });
 
 gulp.task('process_r', function(){
