@@ -2,11 +2,11 @@ extends ss-layout
 block content
 	div.reveal
 		div.slides
-			section Single Horizontal Slide
-			section Another Horizontal Slide
-			section
-				section This is a set of vertical slides
-				section
-					+rcode
-						include ./_R/attaching_data.jade
+			include sections/0-getting-started/slides
+			include sections/1-the-basics/slides
+			include sections/2-working-with-data/slides
+			include sections/3-statistical-analysis/slides
+			include sections/4-plotting/slides
+			include sections/5-extra/slides
+
 

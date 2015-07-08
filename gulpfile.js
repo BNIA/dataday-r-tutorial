@@ -121,7 +121,7 @@ gulp.task('parse_backbone_css', function(){
 });
 
 gulp.task('process_r', function(){
-    return gulp.src('./src/R/*.R')
+    return gulp.src('./src/**/*.R')
         .pipe(replaceTask({
             patterns: [
                 {
@@ -133,7 +133,7 @@ gulp.task('process_r', function(){
         .pipe(rename(function(path){
             path.extname = ".jade";
         }))
-        .pipe(gulp.dest('./src/views/_R'))
+        .pipe(gulp.dest('./src'))
 });
 
 
