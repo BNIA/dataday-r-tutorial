@@ -4,6 +4,7 @@
   "description": "Resources, as well as scripts to generate the site for 2015's Baltimore Data Day R Tutorial",
   "main": "index.js",
   "dependencies": {
+    "ejs": "^2.3.2",
     "express": "^4.13.1"
   },
   "devDependencies": {

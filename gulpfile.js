@@ -48,7 +48,7 @@ gulp.task('doc_compile_jade', function(){
     return gulp.src('./src/views/doc.jade')
         .pipe(jadeInheritance({basedir:'./src/views'}))
         .pipe(jade())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('views'));
 });
 
 //must clone_rfiddle, parse_backbone_css, and compile_less first
@@ -60,7 +60,7 @@ gulp.task('doc_browserify',function(){
     return b.transform(require('browserify-css'),{autoInject:true})
         .bundle()
         .pipe(source('doc-bundle.js'))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('public'));
 });
 
 gulp.task('ss_build_components',['bower_install','clone_backbone','clone_rfiddle']);
@@ -78,7 +78,7 @@ gulp.task('ss_compile_jade', function(){
     return gulp.src('./src/views/ss.jade')
         .pipe(jadeInheritance({basedir:'./src/views'}))
         .pipe(jade())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('views'));
 });
 
 //must clone_rfiddle, parse_backbone_css, and compile_less first
@@ -90,7 +90,7 @@ gulp.task('ss_browserify',function(){
     return b.transform(require('browserify-css'),{autoInject:true})
         .bundle()
         .pipe(source('ss-bundle.js'))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('public'));
 });
 
 gulp.task('bower_install',function(){

@@ -16,3 +16,5 @@ src/components/backbone
 src/components/reveal.js
 src/R/_processed
 src/views/_R
+public
+views
