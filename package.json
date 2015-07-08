@@ -40,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/BNIA/dataday-r-tutorial/issues"
   },
-  "homepage": "https://github.com/BNIA/dataday-r-tutorial#readme"
+  "homepage": "https://github.com/BNIA/dataday-r-tutorial#readme",
+  "engines": {
+    "node": "0.10.x"
+  }
 }
