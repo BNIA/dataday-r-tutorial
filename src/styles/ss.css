@@ -1,2 +1,5 @@
 @import url("../components/_processed/backbone.css");
+@import url("../components/reveal.js/css/reveal.css");
+@import url("../components/reveal.js/css/theme/simple.css");
+@import url("../components/highlight.js/styles/github.css");
 @import url("./ss-main.css");

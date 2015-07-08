@@ -23,10 +23,10 @@ mixin main_section(name)
 	h3&attributes(attributes)= name
 	div.section-contents
 		block
-mixin rfiddle(href)
+
+mixin rcode
 	pre
-		iframe(width='750px' height='300px' src=href allowfullscreen='allowfullscreen' frameborder='0')
-mixin rfiddle_sm(href)
-	pre
-		iframe(width='100%' height='150px' src=href allowfullscreen='allowfullscreen' frameborder='0')
+		code.r
+			block
+
 

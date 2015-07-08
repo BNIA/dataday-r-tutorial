@@ -1,0 +1,6 @@
+crm_sfy <- read.csv("http://data.baltimorecity.gov/api/views/qmw9-b8ep/rows.csv?accessType=DOWNLOAD",row.names=1)
+edu_yth <- read.csv("http://data.baltimorecity.gov/api/views/f9ua-ivaj/rows.csv?accessType=DOWNLOAD",row.names=1)
+attach(crm_sfy)
+attach(edu_yth)
+result <- lm(juvdrug11 ~ eattend11)
+summary(result)

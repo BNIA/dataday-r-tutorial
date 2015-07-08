@@ -5,27 +5,29 @@ var jadeInheritance = require('gulp-jade-inheritance');
 var concat = require('gulp-concat');
 var git = require('gulp-git');
 var replace = require('gulp-replace');
+var replaceTask = require('gulp-replace-task');
 var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var runSequence = require('run-sequence');
 var bower = require('gulp-bower');
+var install = require('gulp-install');
 
 gulp.task('default',['build_all']);
 
 gulp.task('build_all',['doc_build','ss_build']);
 
 gulp.task('doc_build',function(){
-    runSequence('doc_build_components','doc_build_stylesheets','doc_browserify','doc_compile_jade',function(){
+    runSequence('process_r','doc_build_components','doc_build_stylesheets','doc_browserify','doc_compile_jade',function(){
         console.log("Finished Building doc");
     })
 });
 
 gulp.task('ss_build',function(){
-    runSequence('ss_build_components','ss_build_stylesheets','ss_browserify','ss_compile_jade',function(){
+    runSequence('process_r','ss_build_components','ss_build_stylesheets','ss_browserify','ss_compile_jade',function(){
         console.log('Finished Building ss');
     })
-})
+});
 
 gulp.task('doc_build_components',['bower_install','clone_backbone','clone_rfiddle']);
 
@@ -110,6 +112,22 @@ gulp.task('parse_backbone_css', function(){
         .pipe(replace(/<\/style>/,''))
         .pipe(rename('backbone.css'))
         .pipe(gulp.dest('src/components/_processed'));
+});
+
+gulp.task('process_r', function(){
+    return gulp.src('./src/R/*.R')
+        .pipe(replaceTask({
+            patterns: [
+                {
+                    match: /((\b|#).*?(\n|$))/g,
+                    replacement: '| $1'
+                }
+            ]
+        }))
+        .pipe(rename(function(path){
+            path.extname = ".jade";
+        }))
+        .pipe(gulp.dest('./src/views/_R'))
 });
 
 
