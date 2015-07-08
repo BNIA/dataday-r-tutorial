@@ -1,0 +1,43 @@
+{
+  "name": "dataday-r-tutorial",
+  "version": "0.1.0",
+  "description": "Resources, as well as scripts to generate the site for 2015's Baltimore Data Day R Tutorial",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-bower": "^0.0.10",
+    "gulp-concat": "^2.6.0",
+    "browserify": "^10.2.4",
+    "gulp-git": "^1.2.4",
+    "browserify-css": "^0.6.1",
+    "gulp-install": "^0.4.0",
+    "gulp-jade": "^1.0.1",
+    "gulp-jade-inheritance": "^0.5.2",
+    "gulp-jsdoc": "^0.1.4",
+    "gulp-just-replace": "^1.0.2",
+    "gulp-less": "^3.0.3",
+    "gulp-remove-lines": "^0.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.3",
+    "gulp-replace-task": "^0.2.1",
+    "run-sequence": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BNIA/dataday-r-tutorial.git"
+  },
+  "author": "Evan Mahone",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/BNIA/dataday-r-tutorial/issues"
+  },
+  "homepage": "https://github.com/BNIA/dataday-r-tutorial#readme"
+}
