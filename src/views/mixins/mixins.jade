@@ -1,0 +1,32 @@
+mixin toc_section(href,name)
+	a.toc_title(href=href)= name
+	if block
+		ul.toc_section
+			block
+mixin toc_link(href,name)
+	li
+		| &raquo;&nbsp;
+		a(href=href)= name
+mixin toc_item(href,name)
+	li
+		| &ndash;&nbsp;
+		a(href=href)= name
+mixin toc_subtitle(href,name)
+	li
+		b
+			a(href=href)= name
+mixin toc_subitem(href,name)
+	li
+		| &nbsp;&nbsp;&dash;&nbsp;
+		a(href=href)= name
+mixin main_section(name)
+	h3&attributes(attributes)= name
+	div.section-contents
+		block
+mixin rfiddle(href)
+	pre
+		iframe(width='750px' height='300px' src=href allowfullscreen='allowfullscreen' frameborder='0')
+mixin rfiddle_sm(href)
+	pre
+		iframe(width='100%' height='150px' src=href allowfullscreen='allowfullscreen' frameborder='0')
+

@@ -4,7 +4,8 @@
   "description": "Resources, as well as scripts to generate the site for 2015's Baltimore Data Day R Tutorial",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "gulp"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,27 @@
   "bugs": {
     "url": "https://github.com/BNIA/dataday-r-tutorial/issues"
   },
-  "homepage": "https://github.com/BNIA/dataday-r-tutorial#readme"
+  "homepage": "https://github.com/BNIA/dataday-r-tutorial#readme",
+  "devDependencies": {
+    "backbone": "git+https://github.com/jashkenas/backbone.git",
+    "browserify": "^10.2.4",
+    "browserify-css": "^0.6.1",
+    "gulp": "^3.9.0",
+    "gulp-bower": "0.0.10",
+    "gulp-concat": "^2.6.0",
+    "gulp-git": "^1.2.4",
+    "gulp-jade": "^1.0.1",
+    "gulp-jade-inheritance": "^0.5.2",
+    "gulp-jsdoc": "^0.1.4",
+    "gulp-just-replace": "^1.0.2",
+    "gulp-less": "^3.0.3",
+    "gulp-remove-lines": "^0.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.3",
+    "run-sequence": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "gulp-grep-stream": "0.0.2"
+  }
 }
