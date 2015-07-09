@@ -117,7 +117,7 @@ gulp.task('parse_backbone_css', function(){
         .pipe(replace(/<style>/,''))
         .pipe(replace(/<\/style>/,''))
         .pipe(rename('backbone.css'))
-        .pipe(gulp.dest('./src/components/_processed'));
+        .pipe(gulp.dest('src/components/_processed'));
 });
 
 gulp.task('process_r', function(){
