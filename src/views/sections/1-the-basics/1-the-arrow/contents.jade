@@ -1,3 +1,9 @@
 +subsection('The Arrow')(id="the_arrow")
    p
-   | Typing in R is dynamic. This means that types are inferred. This is much like typing in Python or Javascript.
+      | R traditionally uses an arrow, rather than an equals sign for assignment. The three following statements are equivalent in R.
+   +rcode
+      | a <- 4
+      | 4 -> a
+      | a = 4
+   p
+      | While all three are valid, the first is the most common. The '=' operator tends to be used in other circumstances in R.
