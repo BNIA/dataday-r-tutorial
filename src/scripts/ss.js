@@ -2,7 +2,8 @@ var css = require('./../styles/ss.css');
 global.$ = require('./../components/jquery/dist/jquery.min.js');
 var _rFiddleHelper = require('./../components/rfiddleHelper/rfiddleHelper.min.js');
 var Reveal = require('./../components/reveal.js/js/reveal.js');
-var _hljs = require('./../components/highlight.js/highlight.pack.js');
+var _prism = require('./../components/prism/prism.js');
+//var _hljs = require('./../components/highlight.js/highlight.pack.js');
 
 Reveal.initialize({
 
@@ -88,4 +89,4 @@ Reveal.initialize({
     parallaxBackgroundVertical: ''
 
 });
-window.hljs.initHighlightingOnLoad();
+//window.hljs.initHighlightingOnLoad();
