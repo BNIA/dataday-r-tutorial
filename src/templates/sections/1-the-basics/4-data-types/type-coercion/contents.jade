@@ -1,0 +1,21 @@
+p
+  | If we make a vector with character strings and numbers, it comes out as a character vector
++rcode 
+  | a <- c(1,"b",2)
+  | typeof(a)
++rcode 
+  | [1] "character"
+p
+  | Generally, type coercion in R occurs in this order:
+  i 
+    |  character, complex, double, integer, boolean.
+  | That is: 
+ul 
+  li 
+    a any type and a character string produces a character vector
+  li
+    a a complex and a double, integer, or boolean produces a complex
+  li
+    a a double and an integer or boolean produces a double
+  li
+    a an integer and a boolean produces an integer

@@ -18,10 +18,17 @@ gulp.task('default',['build_all']);
 gulp.task('heroku:production', ['build_all']);
 
 gulp.task('build_all',function(){
-    runSequence('process_r','doc_build_components','doc_build_stylesheets','doc_browserify','doc_compile_jade','process_r','ss_build_components','ss_build_stylesheets','ss_browserify','ss_compile_jade', function(){
+    runSequence('process_r','doc_build_components','doc_build_stylesheets','doc_browserify','doc_compile_jade','process_r','ss_build_components','ss_build_stylesheets','ss_browserify','ss_compile_jade','main_build', function(){
         console.log("Finished Building all");
     });
 });
+
+gulp.task('main_build',function(){
+  return gulp.src('./src/templates/main.jade')
+      .pipe(jade())
+      .pipe(gulp.dest('views'));
+})
+
 
 gulp.task('doc_build',function(){
     return runSequence('process_r','doc_build_components','doc_build_stylesheets','doc_browserify','doc_compile_jade',function(){
