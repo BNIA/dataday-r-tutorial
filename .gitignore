@@ -3,7 +3,7 @@ src/styles/doc-main.css
 src/styles/ss-main.css
 node_modules/
 .Rproj.user
-src/components/_processed
+src/components/_processed/*
 src/components/rfiddleHelper
 src/components/jquery
 src/components/package.json
