@@ -47,8 +47,8 @@ gulp.task('doc_compile_less', function(){
 
 //must browserify first
 gulp.task('doc_compile_jade', function(){
-    return gulp.src('./src/views/doc.jade')
-        .pipe(jadeInheritance({basedir:'./src/views'}))
+    return gulp.src('./src/templates/doc.jade')
+        .pipe(jadeInheritance({basedir:'./src/templates'}))
         .pipe(jade())
         .pipe(gulp.dest('views'));
 });
@@ -77,8 +77,8 @@ gulp.task('ss_compile_less', function(){
 
 //must browserify first
 gulp.task('ss_compile_jade', function(){
-    return gulp.src('./src/views/ss.jade')
-        .pipe(jadeInheritance({basedir:'./src/views'}))
+    return gulp.src('./src/templates/ss.jade')
+        .pipe(jadeInheritance({basedir:'./src/templates'}))
         .pipe(jade())
         .pipe(gulp.dest('views'));
 });
@@ -135,7 +135,3 @@ gulp.task('process_r', function(){
         }))
         .pipe(gulp.dest('./src'))
 });
-
-
-
-
