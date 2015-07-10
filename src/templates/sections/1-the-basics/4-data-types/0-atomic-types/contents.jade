@@ -1,15 +1,21 @@
 +subsubsection("Atomic Types")(id="atomic_types")
   p There are 5 atomic data types, as previously mentioned.  
   ul
-    li
-      a
-        i logical 
-        |  - a boolean, true or false
-    li
-      a 
-        i numeric
-        |  - includes subtypes double and integer
-    li 
-      a 
-        i 
+    +liptitle('logical')
+      p.lip A boolean, true or false
+    +liptitle('numeric')
+      p.lip Includes subtypes double and integer
+    +liptitle('complex')
+      p.lip A complex number with a real and imaginary part.
+    +liptitle('character')
+      p.lip Essentially a string
+    +liptitle('raw')
+      p.lip Holds raw data (bytes)
+  p For the purpose of this tutorial we will only be considering logical, numeric and character.
+  +subsubsubsection('logical')
+    p There are two possible values for an item in a logical vector: TRUE and FALSE (in all caps). Here is an example logical vector:
+    +rcode
+      | a <- c(TRUE,FALSE,TRUE,TRUE)
+    
+  
   

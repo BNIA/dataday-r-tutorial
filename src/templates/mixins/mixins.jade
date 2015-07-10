@@ -35,7 +35,21 @@ mixin subsubsection(name)
 	div.section-contents.subsubsection-contents
 		block
 
+mixin subsubsubsection(name)
+	h4.subsubsubh4&attributes(attributes)= name
+	div.section-contents.subsubsubsection-contents
+		block
+
 mixin rcode
 	pre
 		code.language-r.r
 			block
+				
+mixin liptitle(name)
+	li
+		a
+			b= name
+			block
+				
+
+				

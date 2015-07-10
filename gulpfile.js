@@ -123,6 +123,8 @@ gulp.task('parse_backbone_css', function(){
         .pipe(replace(/<\/html>/,''))
         .pipe(replace(/<style>/,''))
         .pipe(replace(/<\/style>/,''))
+        .pipe(replace(/code, pre, tt \{[^]*?\}/m,''))
+        .pipe(replace(/code \{[^]*?\}/m,''))
         .pipe(rename('backbone.css'))
         .pipe(gulp.dest('src/components/_processed'));
 });

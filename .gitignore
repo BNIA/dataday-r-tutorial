@@ -9,6 +9,7 @@ src/components/jquery
 src/components/package.json
 src/components/backbone
 src/components/reveal.js
+src/components/prism-themes
 src/R/
 public/
 views/
