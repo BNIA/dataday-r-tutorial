@@ -19,6 +19,10 @@ mixin toc_subitem(href,name)
 	li
 		| &nbsp;&nbsp;&dash;&nbsp;
 		a(href=href)= name
+mixin toc_subsubitem(href,name)
+	li
+		| &nbsp;&nbsp;&nbsp;&nbsp;&dash;&nbsp;
+		a(href=href)= name
 mixin main_section(name)
 	h2&attributes(attributes)= name
 	div.section-contents.main-section-contents

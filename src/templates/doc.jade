@@ -1,19 +1,52 @@
 extends doc-layout
 block content
 	div#sidebar.interface
-		include sections/main/sb.jade
-		include sections/0-getting-started/index
-		include sections/1-the-basics/index
-		include sections/2-working-with-data/index
-		include sections/3-statistical-analysis/index
-		include sections/4-plotting/index
-		include sections/5-extra/index
+		+toc_section('#home','R Tutorial')
+			+toc_link('https://github.com/BNIA/dataday-r-tutorial','GitHub Repository')
+		+toc_section('#0','0. Getting Started')
+		+toc_section('#1','1. The Basics')
+			+toc_item('#what_is_r', 'What is R?')
+			+toc_item('#the_arrow', 'The Arrow')
+			+toc_subtitle('#vectors','Vectors')
+			+toc_subitem('#creating_vectors','Creating Vectors')
+			+toc_subitem('#indexing_vectors','Indexing Vectors')
+			+toc_subtitle('#typing', 'Typing')
+			+toc_subitem('#type-coercion','Type Coercion')
+			+toc_subtitle('#data_types', 'Data Types')
+			+toc_subitem('#atomic_types','Atomic Types')
+			+toc_subsubitem('#logical', 'Logical')
+			+toc_subsubitem('#numeric', 'Numeric')
+			+toc_subsubitem('#character', 'Character')
+			+toc_subitem('#factors','Factors')
+			+toc_subitem('#missing_and_special_data_types', 'Missing/Special Data Types')
+			+toc_subsubitem('#na','NA')
+			+toc_subsubitem('#nan','NaN')
+			+toc_subsubitem('#null','NULL')
+			+toc_subsubitem('#inf','Inf')
+			+toc_subitem('#arrays_and_matrices',"Arrays and Matrices")
+			+toc_subsubitem('#arrays','Arrays')
+			+toc_subsubitem('#matrices','Matrices')
+			+toc_subitem('#lists_and_data_frames','Lists and Data.Frames')
+			+toc_subsubitem('#lists','Lists')
+			+toc_subsubitem('#data_frames','Data Frames')
+			+toc_item('#functions','Functions')
+			+toc_item('#expressions','Expressions')
+		+toc_section('#2','2. Working With Data')
+			+toc_item('#read_csv','Read.csv')
+			+toc_item('#attaching_data','Attaching Data')
+			+toc_item('#manipulating_data','Manipulating Data')
+		+toc_section('#3','3. Statistical Analysis')
+			+toc_item('#correlation','Correlation')
+			+toc_item('#linear_regression','Linear Regression')
+		+toc_section('#4','4. Plotting and Graphics')
+			+toc_item('#plotting_points','Plotting Points')
+			+toc_item('#plotting_linear_regressions','Plotting Linear Regressions')
+			+toc_item('#histograms','Histograms')
+			+toc_item('#advanced_plotting_with_ggplot2','Advanced Plotting With ggplot2')
 	div#mainpanel.container
-		include ./sections/main/mp.jade
+		include ./sections/main/contents
 		include sections/0-getting-started/contents
 		include sections/1-the-basics/contents
 		include sections/2-working-with-data/contents
 		include sections/3-statistical-analysis/contents
 		include sections/4-plotting/contents
-		include sections/5-extra/contents
-
