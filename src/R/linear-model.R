@@ -4,3 +4,18 @@ attach(crm_sfy)
 attach(edu_yth)
 result <- lm(juvdrug11 ~ eattend11)
 summary(result)
+#plotting
+#plot the points plot(x,y,xlim=c(a,b),ylim=c(a,b))
+
+#abline(mod1, lwd=2)
+
+# calculate residuals and predicted values
+#res <- signif(residuals(mod1), 5)
+#pre <- predict(mod1)
+
+# plot distances between points and the regression line
+#segments(x, y, x, pre, col="red")
+
+# add labels (res values) to points
+#library(calibrate)
+#textxy(x, y, res, cx=0.7)

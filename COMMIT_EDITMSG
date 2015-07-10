@@ -1,0 +1,26 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+# Changes to be committed:
+# 
+# 	deleted:    src/R/attaching_data.R
+# 	deleted:    src/R/detaching_data.R
+# 	modified:   src/R/linear-model.R
+# 	modified:   src/templates/sections/1-the-basics/4-data-types/4-lists-and-data-frames/contents.jade
+# 	modified:   src/templates/sections/1-the-basics/4-data-types/4-lists-and-data-frames/slides.jade
+# 	modified:   src/templates/sections/1-the-basics/4-data-types/5-functions/contents.jade
+# 	modified:   src/templates/sections/1-the-basics/4-data-types/5-functions/slides.jade
+# 	modified:   src/templates/sections/2-working-with-data/0-read-csv/contents.jade
+# 	modified:   src/templates/sections/2-working-with-data/0-read-csv/slides.jade
+# 	modified:   src/templates/sections/2-working-with-data/1-attaching-data/contents.jade
+# 	modified:   src/templates/sections/2-working-with-data/1-attaching-data/slides.jade
+# 	modified:   src/templates/sections/3-statistical-analysis/0-correlation/contents.jade
+# 	modified:   src/templates/sections/3-statistical-analysis/0-correlation/slides.jade
+# 	modified:   src/templates/sections/3-statistical-analysis/1-linear-regression/contents.jade
+# 	modified:   src/templates/sections/3-statistical-analysis/1-linear-regression/slides.jade
+# 	modified:   src/templates/sections/3-statistical-analysis/slides.jade
+# 	modified:   src/templates/sections/4-plotting/contents.jade
+# 	modified:   src/templates/sections/4-plotting/slides.jade

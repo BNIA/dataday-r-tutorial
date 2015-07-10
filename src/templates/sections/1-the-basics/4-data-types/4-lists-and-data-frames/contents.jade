@@ -1,3 +1,74 @@
 +subsubsection("Lists and Data.Frames")(id="lists_and_data_frames")
   +subsubsubsection("Lists")(id="lists")
+    p For this tutorial, all you need to know about lists is that they are essentially vectors which can hold objects of different types. 
+    ul 
+      li 
+        a a list can hold vectors
+      li
+        a a list can hold lists
+      li
+        a list can hold a list of lists
   +subsubsubsection("Data.Frames")(id="data_frames")
+    p Data frames are the primary data structure used in R for statistical analysis.
+    p A data frame is esentially a table (like a SQL table). 
+    p Each column is a vector, or a set of measurements on one variable.
+    p Each column can be a vector of a different type. 
+    p Each column must be the same exact length.
+    
+    p Each row contains one entry, which could be an experimental subject, a city... you name it! 
+    p A column could also be a grouping variable, telling us what group the 'subject' or 'entry' belongs to
+    p A data frame is thus a special type of list whose elements are column vectors. 
+    
+    p We can create a data frame using the data.frame() method. The following is a very simple example:
+    +rcode
+      | var1 <- c(1,2,3)
+      | var2 <- c(TRUE,FALSE,TRUE)
+      | var3 <- c(-1,-1,0)
+      | var4 <- c('a','a','b')
+      | df <- data.frame(var1,var2,var3,var4)
+      | df
+    +rcode
+      |   var1  var2 var3 var4
+      | 1    1  TRUE   -1    a
+      | 2    2 FALSE   -1    a
+      | 3    3  TRUE    0    b
+      
+    p Using the same variables, we can also give our rows names in the following way
+    +rcode 
+      | names <- c('alex','robin','chris')
+      | df <- data.frame(var1,var2,var3,var4,row.names=name)
+      | df 
+    +rcode
+      |      var1  var2 var3 var4
+      | alex    1  TRUE   -1    a
+      | robin   2 FALSE   -1    a
+      | chris   3  TRUE    0    b
+      
+    p You can index a data frame with a single square bracket, with row and column numbers: [row,col].
+    +rcode 
+      | df[3,3]
+    +rcode 
+      | [1] 0
+    p You can also leave column blank to retrieve the whole row: 
+    +rcode 
+      | df[2,]
+    +rcode 
+      |       var1  var2 var3 var4
+      | chris    2 FALSE   -1    a
+    p Or you could leave the row blank to retrieve the whole column:
+    +rcode 
+      | df[,1]
+    +rcode 
+      | [1] 1 2 3
+      
+    p You can even reference a row or column by name this way
+    +rcode 
+      | df['robin','var2']
+    +rcode 
+      | [1] TRUE
+      
+     
+      
+      
+
+      
