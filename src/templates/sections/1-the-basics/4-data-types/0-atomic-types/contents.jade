@@ -1,10 +1,10 @@
 +subsubsection("Atomic Types")(id="atomic_types")
-  p There are 5 atomic data types, as previously mentioned.  
+  p There are 5 atomic data types or "modes", as previously mentioned.  
   ul
     +liptitle('logical')
-      p.lip A boolean, true or false
+      p.lip A boolean, true or false.
     +liptitle('numeric')
-      p.lip Includes subtypes double and integer
+      p.lip Includes subtypes double, single precision and integer.
     +liptitle('complex')
       p.lip A complex number with a real and imaginary part.
     +liptitle('character')
@@ -12,10 +12,39 @@
     +liptitle('raw')
       p.lip Holds raw data (bytes)
   p For the purpose of this tutorial we will only be considering logical, numeric and character.
-  +subsubsubsection('logical')
+  +subsubsubsection('Logical')(id="logical")
     p There are two possible values for an item in a logical vector: TRUE and FALSE (in all caps). Here is an example logical vector:
     +rcode
       | a <- c(TRUE,FALSE,TRUE,TRUE)
+    p You can convert values to a logical vector with the method as.logical()
+    +rcode
+      | #numeric values are false if 0, true if anything else
+      | a <- c(1,2,0,0,1,50.12,0.00) 
+      | as.logical(a)
+    +rcode
+      | [1]  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE
+    p converting characters to logical is a little bit different:
+    +rcode 
+      | #these are the only values accepted as TRUE or FALSE
+      | a <- c("TRUE","T","true","FALSE","F","false")
+      | as.logical(a)
+    +rcode 
+      | [1]  TRUE  TRUE  TRUE FALSE FALSE FALSE
+    p anything that is not "TRUE", "T", "true", "FALSE", "F", or "false" is converted to NA (which we will discuss below)
+  +subsubsubsection('Numeric')(id="numeric")
+    p Numeric vectors are most often double precision vectors (floats). Integers and single precisions tend to get converted to doubles in operations. You can create an integer by suffixing a number with 'L'
+    +rcode
+      | a <- c(1L,2L,3L) # an integer vector
+      | a <- c(1,2.3,4) # a double vector
+    p The as.numeric method will attempt to parse a number, and will return NA if it can't.
+    +rcode 
+      | a <- c('4,000','$5','5','55.00','987e54', TRUE, FALSE)
+      | as.numeric(a)
+    +rcode
+      | [1]       NA       NA 5.00e+00    5.50e+01 9.87e+56       NA       NA
+    p As you can see, not many things can be converted. However, scientific notation can!
+  +subsubsubsection('Character')(id="character")
+    p Character vectors are the same as strings in other languages. You can convert pretty much anything to a character vector with the as.character() method. 
     
   
   

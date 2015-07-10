@@ -7,6 +7,14 @@
   +rcode
     | [1] "c"
   p
+    | We can write over an indexed element in the following way: 
+  +rcode 
+    | a <- c(1,2,3)
+    | a[2] <- 0
+    | a
+  +rcode
+    | [1] 1 0 3
+  p
     | There are many ways to index a subset of a vector. Here are a few examples:
   p
     i Indexing a vector with another vector:

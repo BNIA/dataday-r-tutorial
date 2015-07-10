@@ -3,3 +3,5 @@ TODO: workspace/sessions
 TODO: functions
   TODO: arguments
 TODO: scoping
+TODO: explain or give resources for mode vs type vs class
+TODO: in read.table and read.csv, the argument stringsAsFactors = TRUE by default
