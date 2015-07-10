@@ -1,0 +1,19 @@
+section 
+	+subsection('Vectors')(id="vectors")
+		p
+			| A vector is an indexed set of values which all have the same mode (type). This is also known as an array, or a list in other languages. There are 5 basic modes of vectors: numeric, complex, logical, character and raw. The vector is the most primitive type in R. That is, the most basic elements in R are all vectors.
+section 
+	+subsection('Vectors')(id="vectors")
+		+rcode
+			| a <- 4
+			| length(a)
+		+rcode
+			| [1] 1
+		p This shows us that a has a length. Additionally:
+		+rcode
+			| a[1]
+		+rcode
+			| [1] 4
+		p We can index a, just as we would an array in Java, or a list or tuple in python.
+include 0-creating-vectors/slides
+include 1-indexing-vectors/slides

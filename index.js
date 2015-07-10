@@ -5,7 +5,7 @@ var http = require('http').Server(app);
 app.use('/public', express.static(__dirname + '/public'));
 app.engine('html', require('ejs').renderFile);
 
-app.get('/', function(request,response){
+app.get('/info', function(request,response){
     response.render('main.html');
 })
 

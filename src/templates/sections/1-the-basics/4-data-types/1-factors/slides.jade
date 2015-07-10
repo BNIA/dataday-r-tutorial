@@ -1,0 +1,64 @@
+section
+  +subsubsection("Factors")(id="factors")
+    p 
+      | Factors are a sort of super-atomic type in R which represent categorical data. That is, data with a limited number of values or levels. Factors contain two things: 
+    ul 
+      li 
+        a A vector of elements 
+    ul 
+      li 
+        a A set of the levels of those elements
+section
+  +subsubsection("Factors")(id="factors")
+    p
+      | Factors are created by passing a vector into the factor() function. For example: 
+    +rcode
+      | a <- c("F","F","M","M","F","M","Other","M")
+      | factor(a)
+    +rcode 
+      | [1] F     F     M     M     F     M     Other M    
+      | Levels: F M Other
+    p 
+      | We can see that 'a' has 3 levels: F, M, and Other.
+  
+section
+  +subsubsection("Factors")(id="factors")
+    p
+      | We can access the elements as we would a normal vector, and we can access the levels of a factor with the levels function:
+    +rcode
+      | a <- c(1,0,0,1,2,2,1,0,1)
+      | b <- factor(a)
+      | levels(b)
+    +rcode
+      | [1] "0" "1" "2"
+section
+  +subsubsection("Factors")(id="factors")
+    p 
+      | If we write over one of the levels of our factor, our elements will follow suit!
+    +rcode 
+      | a <- c('foo','bar','foo','baz','foo')
+      | b <- factor(a)
+      | levels(b)[3] <- 'qux' #(bar baz foo) to (bar baz qux)
+      | b
+    +rcode
+      | [1] qux bar qux baz qux
+    p
+      | As we can see, 'foo' has been replaced with 'qux'.
+section
+  +subsubsection("Factors")(id="factors")
+    p If we try to replace an element in a factor with a new level, however, we will get an warning:
+      +rcode 
+        | a <- c(1,2,3,2,1)
+        | b <- factor(a)
+        | b[2] <- 4
+      +rcode 
+        | Warning message:
+        | In `[<-.factor`(`*tmp*`, 2, value = 4) : invalid factor level, NA generated.
+      p
+        | The proper way to do this would be to modify our levels first 
+      +rcode 
+        | a <- c(1,2,3,2,1)
+        | b <- factor(a)
+        | levels(b) <- c(1,2,3,4)
+        | b[2] <- 4 #no warning now
+      

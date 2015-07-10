@@ -1,0 +1,12 @@
+section
+	+subsection('Typing')(id="typing")
+		p
+			| Typing in R is dynamic. This means that types are inferred. This is much like typing in Python or Javascript. 
+		p
+			| For example, if we create a vector with all character strings, the vectors type will be character: 
+		+rcode 
+			| a <- c("a","b","c")
+			| typeof(a)
+		+rcode 
+			| [1] "character"
+include 0-type-coercion/slides

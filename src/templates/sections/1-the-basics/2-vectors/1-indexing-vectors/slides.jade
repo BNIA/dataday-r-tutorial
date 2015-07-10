@@ -1,0 +1,43 @@
+section
+	+subsubsection("Indexing Vectors")(id="indexing_vectors")
+		p
+			| A single element in a vectors is indexed with the [] notation. Indexing starts with 1, rather than 0.
+		+rcode
+			| a <- c("a","b","c","d","e")
+			| a[3]
+		+rcode
+			| [1] "c"
+section
+	+subsubsection("Indexing Vectors")(id="indexing_vectors")
+		p
+			| We can write over an indexed element in the following way: 
+		+rcode 
+			| a <- c(1,2,3)
+			| a[2] <- 0
+			| a
+		+rcode
+			| [1] 1 0 3
+section
+	+subsubsection("Indexing Vectors")(id="indexing_vectors")
+		p
+			i Indexing a vector with another vector:
+		+rcode
+			| a <- c('a','z','y','f')
+			| idx <- c(1,4)
+			| a[idx]
+		+rcode
+			| [1] 'a' 'f'
+		p
+			i Indexing a vector with a range
+		+rcode
+			| a <- c('a','b','c','d','e','f')
+			| a[2:4] #the 2nd through 4th elements
+		+rcode
+			| [1] 'b' 'c' 'd'
+		p
+			i Indexing everything except the nth element
+		+rcode
+			| a <- c(1,2,3,4,5)
+			| a[-3]
+		+rcode
+			| [1] 1 2 4 5
